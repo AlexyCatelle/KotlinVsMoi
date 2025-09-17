@@ -1,6 +1,8 @@
 package tp.models.entities
 
 import tp.models.enums.Genre
+import tp.models.exceptions.DocumentDejaEmprunteException
+import tp.models.exceptions.DocumentNonEmprunteException
 import tp.models.interfaces.Consultable
 import tp.models.interfaces.Empruntable
 
@@ -23,10 +25,27 @@ class Livre(
     }
 
     override fun emprunter() {
-        TODO("Not yet implemented")
+        try{
+            if(estEmprunte) {
+                throw DocumentDejaEmprunteException("Le livre \"$titre\" est déjà emprunté.")
+            }
+       estEmprunte = true
+       println("Vous avez emprunté le livre \"$titre\" avec succès.")
+        }catch (e:Exception){
+            println("erreur lors de l'emprunt de \"$titre\" : ${e.message}")
+        }
     }
 
     override fun rendre() {
-        TODO("Not yet implemented")
+try {
+    if(!estEmprunte) {
+        throw DocumentNonEmprunteException("Le livre \"$titre\" n'est pas actuellement emprunté.")
+    }
+    estEmprunte = false
+    println("\"$titre\" est rendu avec succès.")
+
+}catch (e:Exception){
+    println("erreur lors du retour de \"$titre\" : ${e.message}")
+}
     }
 }
