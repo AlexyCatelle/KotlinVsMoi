@@ -5,9 +5,9 @@ import tp.models.interfaces.Consultable
 class Magazine (
     titre : String,
     anneePublication: Int,
-    numero: Int
-) : Document(titre, anneePublication = 0) , Consultable{
+    var numero: Int
+) : Document(titre, anneePublication) , Consultable{
     override fun afficherInfos() {
-        TODO("Not yet implemented")
+        println("Livre: \"$titre\" (${anneePublication}) n° $numero.")
     }
 }

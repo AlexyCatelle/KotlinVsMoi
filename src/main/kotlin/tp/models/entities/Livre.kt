@@ -8,20 +8,22 @@ import tp.models.interfaces.Empruntable
 
 class Livre(
     titre : String,
-    annneePublication: Int,
-    auteurice: String,
-    nbPages: Int,
-    Genre: Genre,
+    anneePublication: Int,
+    val auteurice: String,
+    val nbPages: Int,
+    val genre: Genre,
     override var estEmprunte: Boolean = false)
 
-    : Document(titre, annneePublication), Empruntable, Consultable {
+    : Document(titre, anneePublication), Empruntable, Consultable {
 
 
     constructor(titre: String, auteurice: String, genre: Genre) :
             this(titre, 0, auteurice, 100, genre)
 
-    override fun afficherInfos() {
-        TODO("Not yet implemented")
+    override fun afficherInfos(
+    ) {
+
+        println("Livre: \"$titre\" (${anneePublication}), Auteur: $auteurice, Pages: $nbPages, Genre: $genre.")
     }
 
     override fun emprunter() {
