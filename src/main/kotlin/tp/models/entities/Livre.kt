@@ -1,6 +1,7 @@
 package tp.models.entities
 
 import tp.models.enums.Genre
+import tp.models.interfaces.Consultable
 import tp.models.interfaces.Empruntable
 
 class Livre(
@@ -11,9 +12,7 @@ class Livre(
     Genre: Genre,
     override var estEmprunte: Boolean = false)
 
-    : Document(titre, annneePublication), Empruntable {
-
-
+    : Document(titre, annneePublication), Empruntable, Consultable {
 
 
     constructor(titre: String, auteurice: String, genre: Genre) :
