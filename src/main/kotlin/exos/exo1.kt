@@ -1,3 +1,5 @@
+package exos
+
 fun nomComplet (prenom : String, nom: String) : String{
     return prenom+nom;
 };

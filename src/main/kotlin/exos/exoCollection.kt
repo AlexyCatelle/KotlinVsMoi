@@ -1,3 +1,7 @@
+package exos
+
+import kotlin.collections.iterator
+
 fun main (){
 inscription()
     file()

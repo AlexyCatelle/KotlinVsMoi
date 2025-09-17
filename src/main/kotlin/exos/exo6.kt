@@ -1,4 +1,4 @@
-//fun vérifierADN (adn: String):Boolean{
+package exos//fun vérifierADN (adn: String):Boolean{
 //
 //}
 //
@@ -10,6 +10,6 @@
 //
 //}
 //
-//fun main (){
+//fun exos.exos.exos.exos.exos.exos.exos.main (){
 //
 //}

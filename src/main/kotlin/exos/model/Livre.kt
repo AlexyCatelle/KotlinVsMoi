@@ -1,4 +1,4 @@
-package model
+package exos.model
 
 class Livre (var titre: String, var auteur: String, var nbPages: Int){
 

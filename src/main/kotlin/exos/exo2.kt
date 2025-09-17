@@ -1,4 +1,6 @@
-fun soustraction ( a: Int, b: Int) :Int {
+package exos
+
+fun soustraction (a: Int, b: Int) :Int {
     println("Je soustrais $a et $b");
     return a - b;
 }

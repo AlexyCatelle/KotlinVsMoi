@@ -1,4 +1,6 @@
-import model.Livre
+package exos
+
+import exos.model.Livre
 
 fun main (){
     // Objet avec le constructeur primaire

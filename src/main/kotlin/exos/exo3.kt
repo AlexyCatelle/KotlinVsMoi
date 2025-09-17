@@ -1,4 +1,4 @@
-import jdk.internal.vm.vector.VectorSupport.test
+package exos
 
 fun quelleHeure(heure : String ="12h00"){
     println("Il est $heure")

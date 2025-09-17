@@ -1,3 +1,7 @@
+package exos
+
+import kotlin.text.iterator
+
 fun compterLettreA(texte : String) : Int{
     var count = 0;
 

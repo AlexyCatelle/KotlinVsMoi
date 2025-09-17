@@ -1,4 +1,6 @@
-import model.Etudiant
+package exos
+
+import exos.model.Etudiant
 
 fun main (){
     val e1 = Etudiant("Alice", 20)

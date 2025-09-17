@@ -1,4 +1,4 @@
-package model
+package exos.model
 
 class Etudiant (val nom: String, val age : Int) {
 
