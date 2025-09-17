@@ -1,6 +1,7 @@
 fun main (){
 inscription()
     file()
+    gestion()
 }
 
 // Cas 1 : Inscription
@@ -37,10 +38,33 @@ fun file(){
         println("En cours de traitement : $client")
         println("Clients restants : ${clients.size}")
     }
+
     println("C'est l'heure de la pause.")
     }
 
 // Cas 3 : Gestion de notes
 fun gestion(){
 
+    val notes = mutableMapOf(
+        "Alice" to 15,
+        "Bob" to 12,
+        "Charlie" to 18,
+        "Diana" to 14
+    )
+
+    println("Liste complète des élèves et leurs notes avant modif :")
+    for ((nom, note) in notes) {
+        println("$nom -> $note/20")
+    }
+
+    notes["Charlie"] = 19
+
+    val derniereNote = notes["Diana"]
+    println("Note du dernier élève ajouté (Diana) : $derniereNote")
+
+
+    println("Liste complète des élèves et leurs notes après modif :")
+    for ((nom, note) in notes) {
+        println("$nom -> $note/20")
+    }
 }
